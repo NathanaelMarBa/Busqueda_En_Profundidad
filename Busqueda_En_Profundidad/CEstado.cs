@@ -9,13 +9,16 @@ namespace Busqueda_En_Profundidad
     internal class CEstado
     {
 
+        public String Nombre;
         public int Valor;
         public List<CEstado> estadoSiguiente = new List<CEstado>();
 
-        public CEstado(int Valor)
+        public CEstado(String Nombre, int Valor)
         {
             this.Valor = Valor;
+            this.Nombre = Nombre;
         }
+
 
         public void agregarEstado(CEstado estado)
         {

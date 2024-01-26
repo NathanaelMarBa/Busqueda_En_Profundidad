@@ -20,23 +20,23 @@ namespace Busqueda_En_Profundidad
         private void btnProfundidad_Click(object sender, EventArgs e)
         {
             CEstado[] estado = new CEstado[17];
-            estado[0] = new CEstado(7);
-            estado[1] = new CEstado(3);
-            estado[2] = new CEstado(5);
-            estado[3] = new CEstado(4);
-            estado[4] = new CEstado(2);
-            estado[5] = new CEstado(9);
-            estado[6] = new CEstado(17);
-            estado[7] = new CEstado(15);
-            estado[8] = new CEstado(6);
-            estado[9] = new CEstado(8);
-            estado[10] = new CEstado(21);
-            estado[11] = new CEstado(25);
-            estado[12] = new CEstado(14);
-            estado[13] = new CEstado(18);
-            estado[14] = new CEstado(20);
-            estado[15] = new CEstado(1);
-            estado[16] = new CEstado(11);
+            estado[0] = new CEstado("0",7);
+            estado[1] = new CEstado("1", 3);
+            estado[2] = new CEstado("2", 5);
+            estado[3] = new CEstado("3", 4);
+            estado[4] = new CEstado("4", 2);
+            estado[5] = new CEstado("5", 9);
+            estado[6] = new CEstado("6", 17);
+            estado[7] = new CEstado("7", 15);
+            estado[8] = new CEstado("8", 6);
+            estado[9] = new CEstado("9", 8);
+            estado[10] = new CEstado("10", 21);
+            estado[11] = new CEstado("11", 25);
+            estado[12] = new CEstado("12", 14);
+            estado[13] = new CEstado("13", 18);
+            estado[14] = new CEstado("14", 20);
+            estado[15] = new CEstado("15", 1);
+            estado[16] = new CEstado("16", 11);
 
             estado[0].agregarEstado(estado[1]);
             estado[0].agregarEstado(estado[2]);
@@ -53,36 +53,28 @@ namespace Busqueda_En_Profundidad
             estado[9].agregarEstado(estado[14]);
             estado[10].agregarEstado(estado[15]);
             estado[10].agregarEstado(estado[16]);
-
-
-
-            CEstado actual;
-
-            int objetivo = int.Parse(txtNumeroaBuscar.Text);
-            bool encontrado = false;
-            int contadorEstados = 0;
-
-            if (estado[0].Valor == objetivo)
-            {
-                encontrado = true;
-                MessageBox.Show("Encontrado en el estado " + contadorEstados, "Aviso");
-            }
-
-            while (!encontrado && contadorEstados < estado.Length)
-            {
-                actual = estado[contadorEstados];
-                foreach (CEstado estadoSig in actual.estadoSiguiente)
-                {
-                    if (objetivo == estadoSig.Valor)
-                    {
-                        encontrado = true;
-                        MessageBox.Show("Encontrado en hijo del estado " + contadorEstados, "Aviso");
-                    }
-                }
-                contadorEstados++;
-            }
-            if (!encontrado)
-                MessageBox.Show("No se encontró el dato", "Aviso");
+            
         }
+
+        public bool BuscarEstado(CEstado estado)
+        {
+            int objetivo = int.Parse(txtNumeroaBuscar.Text);
+            if (estado.estadoSiguiente.Count > 0)
+            {
+                foreach (CEstado siguiente in estado.estadoSiguiente)
+                {
+                    BuscarEstado(siguiente);
+                    if(estado.Valor == objetivo)
+                    MessageBox.Show("Valor encontrado en el estado: " + estado.Nombre);
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
