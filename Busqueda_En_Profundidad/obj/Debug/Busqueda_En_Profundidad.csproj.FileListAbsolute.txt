@@ -1,0 +1,10 @@
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\bin\Debug\Busqueda_En_Profundidad.exe.config
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\bin\Debug\Busqueda_En_Profundidad.exe
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\bin\Debug\Busqueda_En_Profundidad.pdb
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.csproj.AssemblyReference.cache
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.Form1.resources
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.Properties.Resources.resources
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.csproj.GenerateResource.cache
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.csproj.CoreCompileInputs.cache
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.exe
+C:\Users\Nathanael\Documents\C#\Busqueda_En_Profundidad\Busqueda_En_Profundidad\obj\Debug\Busqueda_En_Profundidad.pdb
